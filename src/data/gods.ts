@@ -32,12 +32,34 @@ export const SMITE_GODS: God[] = [
     { name: 'Hua Mulan', role: 'Warrior', pantheon: 'Chinese' },
     { name: 'Hun Batz', role: 'Assassin', pantheon: 'Maya' },
     { name: 'Izanami', role: 'Hunter', pantheon: 'Japanese' },
+    { name: 'Khepri', role: 'Guardian', pantheon: 'Yoruba' },
+    { name: 'Kukulkan', role: 'Mage', pantheon: 'Mayan' },
     { name: 'Jing Wei', role: 'Hunter', pantheon: 'Chinese' },
     { name: 'Loki', role: 'Assassin', pantheon: 'Norse' },
     { name: 'Merlin', role: 'Mage', pantheon: 'Arthurian' },
+    { name: 'Medusa', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Mordred', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Neith', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Nemesis', role: 'Hunter', pantheon: 'Greek' },
     { name: 'Nu Wa', role: 'Mage', pantheon: 'Chinese' },
+    { name: 'Odin', role: 'Hunter', pantheon: 'Greek' },
     { name: 'Pele', role: 'Assassin', pantheon: 'Polynesian' },
-    { name: 'Yemoja', role: 'Guardian', pantheon: 'Yoruba' }
+    { name: 'Poseidon', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Princess Bari', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Ra', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Rama', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Sobek', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Sol', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Susano', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Thanatos', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'The Morrigan', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Thor', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Ullr', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Vulcan', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Yemoja', role: 'Guardian', pantheon: 'Yoruba' },
+    { name: 'Ymir', role: 'Hunter', pantheon: 'Greek' },
+    { name: 'Zeus', role: 'Mage', pantheon: 'Greek' }
+
 ];
 
 // Helper function to get just the names for components that only need the list of names
