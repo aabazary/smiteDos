@@ -31,19 +31,23 @@ export default function TeamGenerator() {
 
     // Load players from localStorage on component mount
     useEffect(() => {
-        try {
-            const savedPlayers = localStorage.getItem('smite2Players');
-            if (savedPlayers && !isInitialized) {
-                const parsedPlayers = JSON.parse(savedPlayers);
-                if (Array.isArray(parsedPlayers)) {
-                    setPlayers(parsedPlayers);
-                    setIsInitialized(true);
+        const loadPlayers = () => {
+            try {
+                const savedPlayers = localStorage.getItem('smite2Players');
+                if (savedPlayers) {
+                    const parsedPlayers = JSON.parse(savedPlayers);
+                    if (Array.isArray(parsedPlayers)) {
+                        setPlayers(parsedPlayers);
+                    }
                 }
+            } catch (error) {
+                console.error('Error loading players from localStorage:', error);
             }
-        } catch (error) {
-            console.error('Error loading players from localStorage:', error);
-        }
-    }, [isInitialized]);
+        };
+
+        loadPlayers();
+        setIsInitialized(true);
+    }, []); // Only run once on mount
 
     // Save players to localStorage whenever they change
     useEffect(() => {
@@ -67,13 +71,14 @@ export default function TeamGenerator() {
             return;
         }
 
-        setPlayers([...players, { id: Date.now().toString(), name: newPlayerName.trim() }]);
+        const newPlayer = { id: Date.now().toString(), name: newPlayerName.trim() };
+        setPlayers(prevPlayers => [...prevPlayers, newPlayer]);
         setNewPlayerName('');
         setError('');
     };
 
     const deletePlayer = (id: string) => {
-        setPlayers(players.filter(p => p.id !== id));
+        setPlayers(prevPlayers => prevPlayers.filter(p => p.id !== id));
     };
 
     const startEdit = (player: Player) => {
@@ -89,7 +94,7 @@ export default function TeamGenerator() {
             return;
         }
 
-        setPlayers(players.map(p => 
+        setPlayers(prevPlayers => prevPlayers.map(p => 
             p.id === editingPlayer.id ? { ...p, name: newPlayerName.trim() } : p
         ));
         setEditingPlayer(null);
