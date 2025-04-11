@@ -20,6 +20,7 @@ export const SMITE_GODS: God[] = [
     { name: 'Baron Samedi', role: 'Mage', pantheon: 'Voodoo' },
     { name: 'Bellona', role: 'Warrior', pantheon: 'Roman' },
     { name: 'Cabrakan', role: 'Guardian', pantheon: 'Maya' },
+    { name: 'Cerberus', role: 'Guardian', pantheon: 'Maya' },
     { name: 'Cernunnos', role: 'Hunter', pantheon: 'Celtic' },
     { name: 'Chaac', role: 'Warrior', pantheon: 'Maya' },
     { name: 'Cupid', role: 'Hunter', pantheon: 'Roman' },
